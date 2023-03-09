@@ -13,7 +13,7 @@ public class TestScript : MonoBehaviour
 
     public string updateMessage;
 
-    public string message1, message2, message3;
+    //public string message1, message2, message3;
 
     public int messageChoice;
 
@@ -24,9 +24,9 @@ public class TestScript : MonoBehaviour
 
         
 
-        if (messageChoice < messages.Length && messageChoice >=0)
+        if (messageChoice <= messages.Length && messageChoice >=1)
         {
-            Debug.Log(messages[messageChoice]);
+            Debug.Log(messages[messageChoice - 1]);
 
         }
 
@@ -36,6 +36,11 @@ public class TestScript : MonoBehaviour
         }
         
         
+        for (int i = 0; i < messages.Length; ++i)
+        {
+            Debug.Log(messages[i]);
+        }
+
         
         //Debug.Log(startMessage);
 
