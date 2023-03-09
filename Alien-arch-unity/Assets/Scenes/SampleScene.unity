@@ -243,10 +243,7 @@ MonoBehaviour:
   - the emperor protects
   startMessage: Exterminatus
   updateMessage: Purge the heretic
-  message1: Tau are bad at melee
-  message2: For the emperor
-  message3: the emperor protects
-  messageChoice: 2
+  messageChoice: 1
 --- !u!212 &1841979911
 SpriteRenderer:
   m_ObjectHideFlags: 0
