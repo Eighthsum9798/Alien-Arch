@@ -10,17 +10,47 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D physicsBody = null;
 
 
+    public float speed = 1;
+
+    public float JumpSpeed = 10;
+
+
+    public Collider2D GroundSensor = null;
+    public LayerMask GroundLayer = 0;
+
     public void MoveLeft()
     {
         Vector2 newVelocity = physicsBody.velocity;
 
-        newVelocity.x = -1;
+        newVelocity.x = -speed;
 
         physicsBody.velocity = newVelocity;
     }
 
+    public void Moveright()
+    {
+        
+            Vector2 newVelocity = physicsBody.velocity;
 
+            newVelocity.x = speed;
 
+            physicsBody.velocity = newVelocity;
+        
+    }
+
+    public void Jump()
+    {
+
+        if (GroundSensor.IsTouchingLayers(GroundLayer))
+        {
+            Vector2 newVelocity = physicsBody.velocity;
+
+            newVelocity.y = JumpSpeed;
+
+            physicsBody.velocity = newVelocity;
+        }
+
+    }
 
     private void Awake()
     {
